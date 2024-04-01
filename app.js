@@ -62,5 +62,7 @@ app.use((req, res) => {
 
   res.status(404).json({ message: "Not found" })
 })
-
-app.listen(3000)
+const port = process.env.PORT || 5000
+app.listen(port, () => {
+  console.log("server started at port" + port)
+})
